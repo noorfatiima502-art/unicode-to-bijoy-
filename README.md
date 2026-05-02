@@ -51,13 +51,6 @@ Social media & publishing platforms
 
 Many platforms still rely on Bijoy encoding, while modern systems use Unicode. This tool bridges that gap by providing quick, accurate, and reliable conversion between both formats.
 
-📥 Installation 
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
-open index.html
-🤝 Contributing
-
-Contributions are welcome! Feel free to fork the repo and submit a pull request.
 
 📜 License
 
