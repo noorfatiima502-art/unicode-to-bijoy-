@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangla Text Converter - Unicode & Bijoy</title>
+    <!-- Use a modern font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="converter-wrapper">
+        <div class="converter-card" id="converter-card">
+            <div class="panels">
+                <!-- Left Panel -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3 id="left-title" style="margin: 0; font-size: 18px; color: #ffffff; font-weight: 600;">Unicode Input</h3>
+                    </div>
+                    <div class="textarea-wrapper">
+                        <textarea id="input-text" placeholder="Type or paste your text here..." spellcheck="false"></textarea>
+                        <button class="mic-btn" id="mic-btn" title="Start Voice Typing">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                    </div>
+                    <div class="panel-footer" style="justify-content: center; background-color: #f0fdf2; border-top: 1px solid #dcfce7;">
+                        
+                        <button class="action-badge borderless-btn" onclick="document.getElementById('file-upload').click()"><i class="fas fa-file-upload"></i> Upload File</button><input type="file" id="file-upload" accept=".txt,.doc,.docx" style="display: none;">
+                    </div>
+                </div>
+
+                <!-- Swap Button -->
+                <div class="swap-wrapper">
+                    <button class="swap-btn" id="swap-btn" title="Swap Conversion Direction">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+                </div>
+
+                <!-- Right Panel -->
+                <div class="panel">
+                    <div class="panel-header">
+                        <h3 id="right-title" style="margin: 0; font-size: 18px; color: #ffffff; font-weight: 600;">Bijoy Output</h3>
+                    </div>
+                    <div class="textarea-wrapper">
+                        <textarea id="output-text" placeholder="Converted text will appear here..." readonly spellcheck="false"></textarea>
+                    </div>
+                    <div class="panel-footer" style="justify-content: center; background-color: #f0fdf2; border-top: 1px solid #dcfce7;">
+                        
+                        <button id="download-btn" class="action-badge borderless-btn" title="Download Output">
+                            <i class="fas fa-file-download"></i> Download File
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button id="btn-u2b" class="btn btn-conversion active">Unicode &rarr; Bijoy</button>
+                <button id="btn-b2u" class="btn btn-conversion">Bijoy &rarr; Unicode</button>
+                <button id="btn-copy" class="btn btn-copy"><i class="fas fa-copy"></i> Copy</button>
+                <button id="btn-clear" class="btn btn-clear"><i class="fas fa-trash"></i> Clear</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="mammoth.min.js"></script>
+    <script src="common.js"></script>
+    <script src="bijoy2uni.js"></script>
+    <script src="uni2bijoy.js"></script>
+    <script src="core-converter.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

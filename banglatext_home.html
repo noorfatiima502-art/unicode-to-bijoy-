@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Unicode to Bijoy Converter - BanglaText</title>
+<meta name="description" content="Convert Bangla unicode text to old bijoy format and Bijoy text into unicode text." />
+<meta name="keywords" content="unicode, bijoy," />
+<link rel="canonical" href="https://www.banglatext.com/uni2bijoy.html" />
+<link href="https://www.banglatext.com/theme/vtbfree-4/styles.css" rel="stylesheet" type="text/css" media="screen" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+textarea
+{
+  width:100%;
+}
+</style>
+<script async type="text/javascript" src="/theme/vtbfree-4/js/bijoy2uni.js"></script>
+<script  async type="text/javascript" src="/theme/vtbfree-4/js/uni2bijoy.js"></script>
+<script async type="text/javascript" src="/theme/vtbfree-4/js/common.js"></script>
+<script  async type="text/javascript" src="/theme/vtbfree-4/js/layout.js"></script>
+<script  async type="text/javascript" src="/theme/vtbfree-4/js/count.js"></script>
+<script  async type="text/javascript" src="/theme/vtbfree-4/js/js1.js"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3461578926858456"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36332406-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-36332406-1');
+</script>
+</head>
+<body >
+<div id="bg_top">
+<div id="wrap_bg">
+<div id="wrap">    		
+<div id="header">
+ 	<div id="logo">
+	
+    	 <a href="https://www.banglatext.com/" target="_parent">
+			
+			
+		
+			
+			
+			
+            </a>  		
+		  </div>
+	<br/><br/>
+	<div id="topnav"><ul>
+		  <li class="index"><a href="https://www.banglatext.com/" title="Write bangla from mobile &amp; computer">Home</a></li>
+<li class="text2image"><a href="https://www.banglatext.com/text2image.html" title="Bangla Text2Image">Text2Image</a></li>
+<li class="about"><a href="https://www.banglatext.com/about.html" title="About">About</a></li>
+<li class="contact"><a href="https://www.banglatext.com/contact.html" title="Contact">Contact</a></li>
+<li class="faq closed"><a href="https://www.banglatext.com/faq.html" title="Frequently Asked Questions">FAQ</a></li>
+<li class="comments"><a href="https://www.banglatext.com/comments.html" title="Comments">Comments</a></li>
+<li class="blog"><a href="http://blog.banglatext.com/" title="Blog">Blog</a></li>
+		 </ul> 
+<a href='https://www.banglatext.com/bn/uni2bijoy.html'>Bangla</a> | <a href='https://www.banglatext.com/uni2bijoy.html'>English</a>		 
+</div>
+
+</div>	<div style="clear: both"></div>	
+<div id="content">
+<div id="left_column">
+	<!-- Start left news box -->
+	<div class="left_news_box">
+	<div class="left_news_top"></div>
+	<div class="left_news_bg">
+	<h1>Unicode to Bijoy Converter</h1>	
+			<div class="text">
+
+	<p>Enter unicode Bangla text in the first form bellow and click on convert to Bijoy button to convert to bijoy encoding.<br />
+	Enter Bijoy encoded text in the second form bellow and click on convert to Unicode button to convert to Unicode encoding. It can convert Unicode + Bijoy mixed text properly.</p>
+<p>&nbsp;</p>
+<form action="" id="form" method="post">
+	<div><textarea cols="100" id="EDT" name="text" placeholder="ইউনিকোড কি-বোর্ডের লেখা এখানে পেস্ট করুন" rows="5"></textarea></div>
+	<div class="convert_button_left"><input class="bijoy_button" name="ConvertToAsciiButton" onclick="ConvertToTextArea('CONVERTEDT');" type="button" value="To Bijoy ▼" /> <input class="unicode_button" name="ConvertButton" onclick="ConvertFromTextArea('CONVERTEDT');" type="button" value="To Unicode ▲" /> <input class="reset_button" onclick="ClearInput();" type="button" value="Clear ⎚" /></div>
+</form>
+<div><textarea cols="100" id="CONVERTEDT" name="bijoytext" placeholder="বিজয় কি-বোর্ডের লেখা এখানে পেস্ট করুন" rows="5" style="font-family:SutonnyMJ; src: url(/data/uploads/sutonnymj.ttf) format("></textarea></div>
+<div>
+	<h4>Bijoy Encoding</h4>
+	<script>
+// this is the id of the form 
+$("#form").submit(function(e) {
+ var url = "/ajax/uni2bijoy.php";
+ // the script where you handle the form input. 
+ $.ajax({ 
+ type: "POST", 
+ url: url, 
+ data: $("#form").serialize(),
+ // serializes the form's elements. 
+ success: function(data) {
+ $("#CONVERTEDT").val(data);
+ // show response from the php script.
+ }
+ });
+ e.preventDefault();
+ // avoid to execute the actual submit of the form.
+ });
+</script><script type="text/javascript">
+        function ClearInput()
+        {
+            document.getElementById("EDT").value='';
+            document.getElementById("CONVERTEDT").value='';
+            document.getElementById("EDT").focus();
+        }
+    </script>
+	<p>Bijoy encoding works on ANSI encoding. It works based on font substitute. For this reason, to show bangla characters properly, ANSI compliant bangla font should be used. Rich text editor may support this, but simple text editor can't handle mixed character and so it can't be used as universally unique text. same text may represent different text for different font selection. Additionally, ANSI encoding support only 256 characters to represent in text.</p>
+	<p>Example: In english font, g represent g. In bangla bijoy font g represnt ম.</p>
+	<h4>Unicode Encoding</h4>
+	<p>Unicode is universal code for characters. It can handle all character set of all human language. all characters are unique for all font. To show bangla characters properly, Unicode compliant bangla font should be used. All latest operating system has built-in Bangla font support. So anyone can read Unicode bangla text on every device without installing appropriate font. Simple text editor can show mixed language font correctly.</p>
+</div>
+	</div>
+	<div class="clear"></div>
+	</div>
+	<div class="left_news_bot"></div>
+	</div>
+</div>
+<div id="right_column">
+<!-- Start right news box -->
+<!-- End right news box -->
+<!-- Start right news box -->
+<div class="right_news_box">
+<div class="right_news_top"></div>
+<div class="right_news_bg">
+<div class="text">
+</div>
+</div>
+<div class="right_news_bot">	
+    </div>
+<div class="right_news_box">
+<div class="right_news_top"></div>
+<div class="right_news_bg">
+<div class="text">
+	</div>
+</div>
+</div>
+<div class="right_news_bot">	
+    </div>
+</div>
+<!-- End right news box -->
+</div>
+<div class="clear"></div>
+</div>
+<div id="footer">
+   <div id="footer_bg_top"></div>
+<div id="footer_bg">
+<div id="templatemo_copyright">
+	<div>
+		View as: <a href="?m=1">Mobile</a> | Desktop	</div>
+	Copyright © 2012-2022 <a href="https://www.banglatext.com/">BanglaText</a> All rigths reserved | <a href="https://www.banglatext.com/privacy.html">Privacy Policy</a>   </div>
+</div>
+<div id="footer_bg_bot"></div>
+</div>
+</div></div></div>
+</body>
+</html>
