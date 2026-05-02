@@ -5,7 +5,7 @@ A fast, lightweight, and user-friendly Unicode to Bijoy Converter that allows us
 🚀 Live Demo
 
 👉 Visit Here: https://banglaconvertertool.com/
- (Replace with your actual link)
+
 
 📌 Features
 🔄 Unicode ⇄ Bijoy conversion
@@ -51,7 +51,7 @@ Social media & publishing platforms
 
 Many platforms still rely on Bijoy encoding, while modern systems use Unicode. This tool bridges that gap by providing quick, accurate, and reliable conversion between both formats.
 
-📥 Installation (Optional)
+📥 Installation 
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
 open index.html
